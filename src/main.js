@@ -6,7 +6,7 @@ const prices = {
 
 async function loadTranslations(language) {
   try {
-    const response = await fetch(`/i18n/${language}.json`);
+    const response = await fetch(`./i18n/${language}.json`);
     if (!response.ok) {
       throw new Error(`Failed to load translations for ${language}`);
     }
@@ -72,6 +72,7 @@ async function setupTranslations() {
   // Извлекаем параметр lang из URL
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get('lang');
+  console.log(langParam)
 
   // Определяем язык для загрузки переводов
   const language = langParam || defaultLanguage;

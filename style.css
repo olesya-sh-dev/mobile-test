@@ -14,8 +14,10 @@
 
 .lang-fr #yearly,
 .lang-fr #yearly-weekly,
+.lang-fr #weekly,
 .lang-de #yearly,
 .lang-de #yearly-weekly,
+.lang-de #weekly,
 .lang-fr .weekly-btn h4,
 .lang-de .weekly-btn h4 {
   font-size: var(--font-size-small);
@@ -59,7 +61,7 @@ body {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  background-image: url('/src/assets/bg/bg.webp');
+  background-image: url('/src/assets/bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 24px;
@@ -104,13 +106,13 @@ article {
   }
 }
 .first-card {
-  background-image: url('/src/assets/cards/art/art.webp');
+  background-image: url('/src/assets/art.webp');
 }
 .second-card {
-  background-image: url('/src/assets/cards/exclusive/exclusive.webp');
+  background-image: url('/src/assets/exclusive.webp');
 }
 .third-card {
-  background-image: url('/src/assets/cards/avatars/avatars.webp');
+  background-image: url('/src/assets/avatars.webp');
 }
 
 h2 {
@@ -203,7 +205,7 @@ section {
   .best-offer::before {
     position: absolute;
     content: '';
-    background-image: url('/src/assets/border-gradient/path-left.svg');
+    background-image: url('/src/assets/path-left.svg');
     width: 128px;
     height: 1px;
     right: 119px;
@@ -212,7 +214,7 @@ section {
   .best-offer::after {
     position: absolute;
     content: '';
-    background-image: url('/src/assets/border-gradient/path-right.svg');
+    background-image: url('/src/assets/path-right.svg');
     width: 24.5px;
     height: 27.78px;
     left: 118px;
@@ -253,30 +255,30 @@ section {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body {
-    background-image: url('/src/assets/bg/bg@2x.webp');
+    background-image: url('/src/assets/bg@2x.webp');
   }
   .first-card {
-    background-image: url('/src/assets/cards/art/art@2x.webp');
+    background-image: url('/src/assets/art@2x.webp');
   }
   .second-card {
-    background-image: url('/src/assets/cards/exclusive/exclusive@2x.webp');
+    background-image: url('/src/assets/exclusive@2x.webp');
   }
   .third-card {
-    background-image: url('/src/assets/cards/avatars/avatars@2x.webp');
+    background-image: url('/src/assets/avatars@2x.webp');
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
   body {
-    background-image: url('/src/assets/bg/bg@3x.webp');
+    background-image: url('/src/assets/bg@3x.webp');
   }
   .first-card {
-    background-image: url('/src/assets/cards/art/art@3x.webp');
+    background-image: url('/src/assets/art@3x.webp');
   }
   .second-card {
-    background-image: url('/src/assets/cards/exclusive/exclusive@3x.webp');
+    background-image: url('/src/assets/exclusive@3x.webp');
   }
   .third-card {
-    background-image: url('/src/assets/cards/avatars/avatars@3x.webp');
+    background-image: url('/src/assets/avatars@3x.webp');
   }
 }
 
