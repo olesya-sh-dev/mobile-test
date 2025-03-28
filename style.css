@@ -233,6 +233,11 @@ section {
   text-align: center;
   color: #070b33;
   font-family: var(--second-family);
+  border: none !important; 
+  outline: none !important; 
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  box-shadow: none !important; 
 }
 
 .footer {
@@ -256,7 +261,7 @@ section {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body {
     background-image: url('/src/assets/bg@2x.webp');
-  }
+  } 
   .first-card {
     background-image: url('/src/assets/art@2x.webp');
   }
@@ -270,7 +275,7 @@ section {
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
   body {
     background-image: url('/src/assets/bg@3x.webp');
-  }
+  } 
   .first-card {
     background-image: url('/src/assets/art@3x.webp');
   }
