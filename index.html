@@ -32,13 +32,95 @@
     </a>
     <h1 data-i18n="Get Unlimited <br>Access">Get Unlimited Access</h1>
     <article>
-      <div class="first-card">
+      <div>
+        <picture>
+          <!-- 1. Оптимальный вариант (WebP) -->
+          <source
+            srcset="/src/assets/art.webp 1x, /src/assets/art@2x.webp 2x, /src/assets/art@3x.webp 3x"
+            type="image/webp"
+          />
+
+          <!-- 2. Fallback для старых Safari (JPG) -->
+          <source
+            srcset="/src/assets/art.jpg 1x, /src/assets/art@2x.jpg 2x, /src/assets/art@3x.jpg 3x"
+            type="image/jpeg"
+          />
+
+          <!-- 3. Аварийный fallback (PNG) -->
+          <img
+            src="/src/assets/art.png"
+            srcset="/src/assets/art@2x.png 2x, /src/assets/art@3x.png 3x"
+            alt="art"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <h2 data-i18n="Unlimited Art <br>Creation">Unlimited Art Creation</h2>
       </div>
-      <div class="second-card">
+      <div>
+        <picture>
+          <!-- 1. Оптимальный вариант (WebP) -->
+          <source
+            srcset="
+              /src/assets/exclusive.webp.webp 1x,
+              /src/assets/exclusive@2x.webp   2x,
+              /src/assets/exclusive@3x.webp   3x
+            "
+            type="image/webp"
+          />
+
+          <!-- 2. Fallback для старых Safari (JPG) -->
+          <source
+            srcset="
+              /src/assets/exclusive.jpg    1x,
+              /src/assets/exclusive@2x.jpg 2x,
+              /src/assets/exclusive@3x.jpg 3x
+            "
+            type="image/jpeg"
+          />
+
+          <!-- 3. Аварийный fallback (PNG) -->
+          <img
+            src="/src/assets/exclusive.png"
+            srcset="/src/assets/exclusive@2x.png 2x, /src/assets/exclusive@3x.png 2x"
+            alt="art"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <h2 data-i18n="Exclusive <br>Styles">Exclusive Styles</h2>
       </div>
-      <div class="third-card">
+      <div>
+        <picture>
+          <!-- 1. Оптимальный вариант (WebP) -->
+          <source
+            srcset="
+              /src/assets/avatars.webp    1x,
+              /src/assets/avatars@2x.webp 2x,
+              /src/assets/avatars@3x.webp 3x
+            "
+            type="image/webp"
+          />
+
+          <!-- 2. Fallback для старых Safari (JPG) -->
+          <source
+            srcset="
+              /src/assets/avatars.jpg    1x,
+              /src/assets/avatars@2x.jpg 2x,
+              /src/assets/avatars@3x.jpg 3x
+            "
+            type="image/jpeg"
+          />
+
+          <!-- 3. Аварийный fallback (PNG) -->
+          <img
+            src="/src/assets/avatars.png"
+            srcset="/src/assets/avatars@2x.png 2x, /src/assets/avatars@3x.png 3x"
+            alt="art"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <h2 data-i18n="Magic Avatars <br>With 20% Off">Magic Avatars With 20% Off</h2>
       </div>
     </article>

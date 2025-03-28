@@ -61,7 +61,6 @@ body {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  background-image: url('/src/assets/bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 24px;
@@ -69,6 +68,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('/src/assets/bg.webp');
+
 }
 
 .close {
@@ -93,34 +94,36 @@ article {
   display: flex;
   width: 100%;
   flex-direction: row;
+  justify-content: space-between;
   gap: 6px;
   margin-bottom: 4vh;
   height: 146px;
   div {
-    display: flex;
-    width: 100%;
-    border-radius: 16px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0 8px 12px 8px;
+    flex: 1;
+    position: relative;
   }
 }
-.first-card {
-  background-image: url('/src/assets/art.webp');
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.second-card {
-  background-image: url('/src/assets/exclusive.webp');
-}
-.third-card {
-  background-image: url('/src/assets/avatars.webp');
+
+picture img {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h2 {
-  align-self: flex-end;
+  position: absolute;
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 12px;
   color: #fff;
+  bottom: 12px;
+  left: 8px;
 }
 
 section {
@@ -233,11 +236,11 @@ section {
   text-align: center;
   color: #070b33;
   font-family: var(--second-family);
-  border: none !important; 
-  outline: none !important; 
+  border: none !important;
+  outline: none !important;
   -webkit-appearance: none !important;
   appearance: none !important;
-  box-shadow: none !important; 
+  box-shadow: none !important;
 }
 
 .footer {
@@ -255,35 +258,6 @@ section {
   a {
     color: #ffffff;
     opacity: 0.3;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  body {
-    background-image: url('/src/assets/bg@2x.webp');
-  } 
-  .first-card {
-    background-image: url('/src/assets/art@2x.webp');
-  }
-  .second-card {
-    background-image: url('/src/assets/exclusive@2x.webp');
-  }
-  .third-card {
-    background-image: url('/src/assets/avatars@2x.webp');
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-  body {
-    background-image: url('/src/assets/bg@3x.webp');
-  } 
-  .first-card {
-    background-image: url('/src/assets/art@3x.webp');
-  }
-  .second-card {
-    background-image: url('/src/assets/exclusive@3x.webp');
-  }
-  .third-card {
-    background-image: url('/src/assets/avatars@3x.webp');
   }
 }
 

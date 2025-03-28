@@ -17,20 +17,6 @@ async function loadTranslations(language) {
     return null;
   }
 }
-// function replacePricePlaceholders(prices) {
-//   const elements = [
-//     { id: 'yearly', value: prices.yearly },
-//     { id: 'yearly-weekly', value: prices.weeklyYearly },
-//     { id: 'weekly', value: prices.weekly },
-//   ];
-
-//   elements.forEach(({ id, value }) => {
-//     const element = document.getElementById(id);
-//     if (element && element.textContent.includes('{{price}}')) {
-//       element.textContent = element.textContent.replace('{{price}}', value);
-//     }
-//   });
-// }
 function replacePricePlaceholders(prices) {
   // Заменяем {{price}} для yearly
   const yearlyElement = document.getElementById('yearly');
@@ -72,7 +58,7 @@ async function setupTranslations() {
   // Извлекаем параметр lang из URL
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get('lang');
-  console.log(langParam)
+  console.log(langParam);
 
   // Определяем язык для загрузки переводов
   const language = langParam || defaultLanguage;
