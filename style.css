@@ -7,9 +7,6 @@
   --font-family: 'SF Pro Display', sans-serif;
   --second-family: 'SF Pro', sans-serif;
   --font3: 'Roboto', sans-serif;
-  --font-size-medium: 90%;
-  --font-size-small: 80%;
-  --font-size-xsmall: 70%;
 }
 
 /* для испанского */
@@ -96,6 +93,7 @@
 .lang-fr .footer {
   font-size: 10px;
 }
+
 body {
   font-family:
     var(--font-family),
@@ -120,8 +118,23 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -10;
+  /* Базовый fallback для старых браузеров */
+  background-image: url('/src/assets/bg.png'); /* Резервное изображение PNG */
+  background-image: url('/src/assets/bg.jpeg'); /* Основное изображение JPEG */
+  /* Современные браузеры: WebP с DPR */
+  background-image: -webkit-image-set(
+    url('/src/assets/bg.webp') 1x,
+    url('/src/assets/bg@2x.webp') 2x,
+    url('/src/assets/bg@3x.webp') 3x
+  );
+  background-image: image-set(
+    url('/src/assets/bg.webp') 1x,
+    url('/src/assets/bg@2x.webp') 2x,
+    url('/src/assets/bg@3x.webp') 3x
+  );
 }
+
 .close {
   position: absolute;
   top: 8vh;

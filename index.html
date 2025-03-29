@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#ffffff" />
     <meta http-equiv="Content-Language" content="en" />
     <title>Access Banner</title>
+    <link
+      rel="preload"
+      href="/src/assets/bg.webp"
+      as="image"
+      imagesrcset="/src/assets/bg.webp 1x, /src/assets/bg@2x.webp 2x"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -39,19 +45,8 @@
             srcset="/src/assets/art.webp 1x, /src/assets/art@2x.webp 2x, /src/assets/art@3x.webp 3x"
             type="image/webp"
           />
-
-          <source
-            srcset="/src/assets/art.jpeg 1x, /src/assets/art@2x.jpeg 2x, /src/assets/art@3x.jpeg 3x"
-            type="image/jpeg"
-          />
-
-          <img
-            src="/src/assets/art.png"
-            srcset="/src/assets/art@2x.png 2x, /src/assets/art@3x.png 3x"
-            alt="art"
-            loading="lazy"
-            decoding="async"
-          />
+          <source srcset="/src/assets/art.jpeg" type="image/jpeg" />
+          <img src="/src/assets/art.png" alt="art" loading="lazy" decoding="async" />
         </picture>
         <h2 data-i18n="Unlimited Art <br>Creation">Unlimited Art Creation</h2>
       </div>
@@ -59,29 +54,14 @@
         <picture>
           <source
             srcset="
-              /src/assets/exclusive.webp.webp 1x,
-              /src/assets/exclusive@2x.webp   2x,
-              /src/assets/exclusive@3x.webp   3x
+              /src/assets/exclusive.webp    1x,
+              /src/assets/exclusive@2x.webp 2x,
+              /src/assets/exclusive@3x.webp 3x
             "
             type="image/webp"
           />
-
-          <source
-            srcset="
-              /src/assets/exclusive.jpeg    1x,
-              /src/assets/exclusive@2x.jpeg 2x,
-              /src/assets/exclusive@3x.jpeg 3x
-            "
-            type="image/jpeg"
-          />
-
-          <img
-            src="/src/assets/exclusive.png"
-            srcset="/src/assets/exclusive@2x.png 2x, /src/assets/exclusive@3x.png 2x"
-            alt="art"
-            loading="lazy"
-            decoding="async"
-          />
+          <source srcset="/src/assets/exclusive.jpeg" type="image/jpeg" />
+          <img src="/src/assets/exclusive.png" alt="art" loading="lazy" decoding="async" />
         </picture>
         <h2 data-i18n="Exclusive <br>Styles">Exclusive Styles</h2>
       </div>
@@ -95,22 +75,8 @@
             "
             type="image/webp"
           />
-
-          <source
-            srcset="
-              /src/assets/avatars.jpeg    1x,
-              /src/assets/avatars@2x.jpeg 2x,
-              /src/assets/avatars@3x.jpeg 3x
-            "
-            type="image/jpeg"
-          />
-          <img
-            src="/src/assets/avatars.png"
-            srcset="/src/assets/avatars@2x.png 2x, /src/assets/avatars@3x.png 3x"
-            alt="art"
-            loading="lazy"
-            decoding="async"
-          />
+          <source srcset="/src/assets/avatars.jpeg" type="image/jpeg" />
+          <img src="/src/assets/avatars.png" alt="art" loading="lazy" decoding="async" />
         </picture>
         <h2 data-i18n="Magic Avatars <br>With 20% Off">Magic Avatars With 20% Off</h2>
       </div>
