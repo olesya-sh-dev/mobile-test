@@ -9,9 +9,100 @@
   --font3: 'Roboto', sans-serif;
   --font-size-medium: 90%;
   --font-size-small: 80%;
-  --font-size-xsmall: 60%;
+  --font-size-xsmall: 70%;
 }
 
+/* для испанского */
+.lang-es h2 {
+  font-size: 9px;
+}
+.lang-es h4,
+.lang-es #yearly,
+.lang-es #yearly-weekly,
+.lang-es #weekly {
+  font-size: 15px;
+} 
+ .lang-es .best-offer {
+  font-size: 12px;
+}
+.lang-es .yearly-btn,
+.lang-es .weekly-btn {
+  padding-right: 42px
+}
+.lang-es .footer {
+  font-size: 12px;
+}
+
+/* для немецкого */
+.lang-de h1 {
+  font-size: 30px;
+}
+.lang-de h4,
+.lang-de #yearly,
+.lang-de #yearly-weekly,
+.lang-de #weekly{
+  font-size: 13px;
+}
+.lang-de .best-offer {
+  font-size: 11px;
+}
+.lang-de .yearly-btn,
+.lang-de .weekly-btn {
+  padding-right: 52px
+}
+.lang-de .footer {
+  font-size: 10px;
+}
+
+/* для португальского */
+.lang-pt h1 {
+  font-size: 36px;
+}
+.lang-pt h2 {
+  font-size: 10px;
+}
+.lang-pt h4,
+.lang-pt #yearly,
+.lang-pt #yearly-weekly,
+.lang-pt #weekly {
+  font-size: 14px;
+}
+.lang-pt .yearly-btn,
+.lang-pt .weekly-btn {
+  padding-right: 45px
+}
+.lang-pt .best-offer{
+  font-size: 11px;
+}
+.lang-pt .footer {
+  font-size: 12px;
+}
+
+
+/* для французского */
+.lang-fr h1 {
+  font-size: 32px;
+}
+.lang-fr h2 {
+  font-size: 10px;
+}
+.lang-fr h4,
+.lang-fr #yearly,
+.lang-fr #yearly-weekly,
+.lang-fr #weekly {
+  font-size: 14px;
+}
+.lang-fr .yearly-btn,
+.lang-fr .weekly-btn {
+  padding-right: 47px
+}
+.lang-fr .best-offer{
+  font-size: 11px;
+}
+.lang-fr .footer {
+  font-size: 10px;
+}
+/* 
 .lang-fr #yearly,
 .lang-fr #yearly-weekly,
 .lang-fr #weekly,
@@ -49,7 +140,7 @@
 .lang-pt #yearly-weekly,
 .lang-pt #weekly {
   font-size: 14px;
-}
+} */
 
 body {
   font-family:
@@ -61,14 +152,11 @@ body {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  /* background-size: cover;
-  background-repeat: no-repeat; */
   padding-left: 24px;
   padding-right: 24px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* background-image: url('/src/assets/bg.webp'); */
 }
 .bg {
   position: absolute;
