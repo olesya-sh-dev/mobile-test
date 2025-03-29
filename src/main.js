@@ -84,7 +84,6 @@ async function setupTranslations() {
 function setBackgroundImage() {
   const bgDiv = document.querySelector('.bg');
 
-  // Test for WebP support
   const testWebP = (callback) => {
     const webP = new Image();
     webP.onload = webP.onerror = () => callback(webP.height === 2);
@@ -100,7 +99,6 @@ function setBackgroundImage() {
       } else {
         bgDiv.style.backgroundImage = 'url("/src/assets/bg@3x.jpeg")';
 
-        // Fallback to PNG if JPEG fails (rare)
         const img = new Image();
         img.onerror = () => {
           bgDiv.style.backgroundImage = 'url("/src/assets/bg@3x.png")';
@@ -113,8 +111,6 @@ function setBackgroundImage() {
         bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.webp")';
       } else {
         bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.jpeg")';
-
-        // Fallback to PNG if JPEG fails (rare)
         const img = new Image();
         img.onerror = () => {
           bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.png")';
@@ -122,13 +118,11 @@ function setBackgroundImage() {
         img.src = '/src/assets/bg@2x.jpeg';
       }
     } else {
-      // Non-Retina display
       if (supported) {
         bgDiv.style.backgroundImage = 'url("/src/assets/bg.webp")';
       } else {
         bgDiv.style.backgroundImage = 'url("/src/assets/bg.jpeg")';
 
-        // Fallback to PNG if JPEG fails (rare)
         const img = new Image();
         img.onerror = () => {
           bgDiv.style.backgroundImage = 'url("/src/assets/bg.png")';

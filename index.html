@@ -35,19 +35,16 @@
     <article>
       <div>
         <picture>
-          <!-- 1. Оптимальный вариант (WebP) -->
           <source
             srcset="/src/assets/art.webp 1x, /src/assets/art@2x.webp 2x, /src/assets/art@3x.webp 3x"
             type="image/webp"
           />
 
-          <!-- 2. Fallback для старых Safari (JPeG) -->
           <source
             srcset="/src/assets/art.jpeg 1x, /src/assets/art@2x.jpeg 2x, /src/assets/art@3x.jpeg 3x"
             type="image/jpeg"
           />
 
-          <!-- 3. Аварийный fallback (PNG) -->
           <img
             src="/src/assets/art.png"
             srcset="/src/assets/art@2x.png 2x, /src/assets/art@3x.png 3x"
@@ -60,7 +57,6 @@
       </div>
       <div>
         <picture>
-          <!-- 1. Оптимальный вариант (WebP) -->
           <source
             srcset="
               /src/assets/exclusive.webp.webp 1x,
@@ -70,7 +66,6 @@
             type="image/webp"
           />
 
-          <!-- 2. Fallback для старых Safari (JPeG) -->
           <source
             srcset="
               /src/assets/exclusive.jpeg    1x,
@@ -80,7 +75,6 @@
             type="image/jpeg"
           />
 
-          <!-- 3. Аварийный fallback (PNG) -->
           <img
             src="/src/assets/exclusive.png"
             srcset="/src/assets/exclusive@2x.png 2x, /src/assets/exclusive@3x.png 2x"
@@ -93,7 +87,6 @@
       </div>
       <div>
         <picture>
-          <!-- 1. Оптимальный вариант (WebP) -->
           <source
             srcset="
               /src/assets/avatars.webp    1x,
@@ -103,7 +96,6 @@
             type="image/webp"
           />
 
-          <!-- 2. Fallback для старых Safari (JPeG) -->
           <source
             srcset="
               /src/assets/avatars.jpeg    1x,
@@ -112,8 +104,6 @@
             "
             type="image/jpeg"
           />
-
-          <!-- 3. Аварийный fallback (PNG) -->
           <img
             src="/src/assets/avatars.png"
             srcset="/src/assets/avatars@2x.png 2x, /src/assets/avatars@3x.png 3x"
