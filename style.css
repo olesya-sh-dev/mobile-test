@@ -15,19 +15,14 @@
 /* для испанского */
 .lang-es h2 {
   font-size: 9px;
+  line-height: 15px;
 }
-.lang-es h4,
-.lang-es #yearly,
-.lang-es #yearly-weekly,
-.lang-es #weekly {
-  font-size: 15px;
-} 
- .lang-es .best-offer {
+.lang-es .best-offer {
   font-size: 12px;
 }
 .lang-es .yearly-btn,
 .lang-es .weekly-btn {
-  padding-right: 42px
+  padding-right: 42px;
 }
 .lang-es .footer {
   font-size: 12px;
@@ -36,19 +31,21 @@
 /* для немецкого */
 .lang-de h1 {
   font-size: 30px;
+  display: inline-block;
+  height: 92px;
 }
 .lang-de h4,
 .lang-de #yearly,
 .lang-de #yearly-weekly,
-.lang-de #weekly{
+.lang-de #weekly {
   font-size: 13px;
 }
 .lang-de .best-offer {
-  font-size: 11px;
+  font-size: 12px;
 }
 .lang-de .yearly-btn,
 .lang-de .weekly-btn {
-  padding-right: 52px
+  padding-right: 52px;
 }
 .lang-de .footer {
   font-size: 10px;
@@ -57,91 +54,48 @@
 /* для португальского */
 .lang-pt h1 {
   font-size: 36px;
+  line-height: 46px;
 }
 .lang-pt h2 {
   font-size: 10px;
-}
-.lang-pt h4,
-.lang-pt #yearly,
-.lang-pt #yearly-weekly,
-.lang-pt #weekly {
-  font-size: 14px;
+  line-height: 15px;
 }
 .lang-pt .yearly-btn,
 .lang-pt .weekly-btn {
-  padding-right: 45px
+  padding-right: 38px;
 }
-.lang-pt .best-offer{
-  font-size: 11px;
+.lang-pt .best-offer {
+  font-size: 12px;
 }
 .lang-pt .footer {
   font-size: 12px;
 }
 
-
 /* для французского */
 .lang-fr h1 {
   font-size: 32px;
+  line-height: 46px;
 }
 .lang-fr h2 {
   font-size: 10px;
+  line-height: 15px;
 }
 .lang-fr h4,
 .lang-fr #yearly,
 .lang-fr #yearly-weekly,
 .lang-fr #weekly {
-  font-size: 14px;
+  font-size: 15px;
 }
 .lang-fr .yearly-btn,
 .lang-fr .weekly-btn {
-  padding-right: 47px
+  padding-right: 40px;
 }
-.lang-fr .best-offer{
+.lang-fr .best-offer {
   font-size: 11px;
 }
 .lang-fr .footer {
   font-size: 10px;
 }
-/* 
-.lang-fr #yearly,
-.lang-fr #yearly-weekly,
-.lang-fr #weekly,
-.lang-de #yearly,
-.lang-de #yearly-weekly,
-.lang-de #weekly,
-.lang-fr .weekly-btn h4,
-.lang-de .weekly-btn h4 {
-  font-size: var(--font-size-small);
-}
-
-.lang-fr .footer,
-.lang-de .footer,
-.lang-pt .footer,
-.lang-es .footer {
-  font-size: var(--font-size-xsmall);
-}
-
-.lang-fr h1,
-.lang-de h1 {
-  font-size: 30px;
-}
-.lang-pt h1 {
-  font-size: 36px;
-}
-
-.lang-fr .best-offer,
-.lang-de .best-offer {
-  font-size: 11px;
-}
-
-.lang-fr .yearly-choice h4,
-.lang-de .yearly-choice h4,
-.lang-pt #yearly,
-.lang-pt #yearly-weekly,
-.lang-pt #weekly {
-  font-size: 14px;
-} */
-
 body {
   font-family:
     var(--font-family),
