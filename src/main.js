@@ -81,7 +81,66 @@ async function setupTranslations() {
   }
 }
 
+function setBackgroundImage() {
+  const bgDiv = document.querySelector('.bg');
+
+  // Test for WebP support
+  const testWebP = (callback) => {
+    const webP = new Image();
+    webP.onload = webP.onerror = () => callback(webP.height === 2);
+    webP.src =
+      'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  };
+
+  testWebP((supported) => {
+    if (window.devicePixelRatio >= 3) {
+      // 3x Retina display
+      if (supported) {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg@3x.webp")';
+      } else {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg@3x.jpeg")';
+
+        // Fallback to PNG if JPEG fails (rare)
+        const img = new Image();
+        img.onerror = () => {
+          bgDiv.style.backgroundImage = 'url("/src/assets/bg@3x.png")';
+        };
+        img.src = '/src/assets/bg@3x.jpeg';
+      }
+    } else if (window.devicePixelRatio > 1) {
+      // 2x Retina display
+      if (supported) {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.webp")';
+      } else {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.jpeg")';
+
+        // Fallback to PNG if JPEG fails (rare)
+        const img = new Image();
+        img.onerror = () => {
+          bgDiv.style.backgroundImage = 'url("/src/assets/bg@2x.png")';
+        };
+        img.src = '/src/assets/bg@2x.jpeg';
+      }
+    } else {
+      // Non-Retina display
+      if (supported) {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg.webp")';
+      } else {
+        bgDiv.style.backgroundImage = 'url("/src/assets/bg.jpeg")';
+
+        // Fallback to PNG if JPEG fails (rare)
+        const img = new Image();
+        img.onerror = () => {
+          bgDiv.style.backgroundImage = 'url("/src/assets/bg.png")';
+        };
+        img.src = '/src/assets/bg.jpeg';
+      }
+    }
+  });
+}
+
 setupTranslations();
+setBackgroundImage();
 
 // Обработчики для выбора ячейки
 document.querySelector('.yearly-btn').addEventListener('click', () => {
