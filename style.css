@@ -118,16 +118,15 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -10; 
+  z-index: -10;
   background-image: url('/src/assets/bg.png'); /* Fallback для старых браузеров */
   background-image: url('/src/assets/bg.jpeg'); /* Fallback для браузеров, не поддерживающих webp */
-  background-image: url('/src/assets/bg.webp');/* Fallback для браузеров, не поддерживающих image-set */
-  background-image: 
-  image-set(
+  background-image: url('/src/assets/bg.webp'); /* Fallback для браузеров, не поддерживающих image-set */
+  background-image: image-set(
     url('/src/assets/bg.webp') 1x,
     url('/src/assets/bg@2x.webp') 2x,
-    url('/src/assets/bg@3x.webp') 3x 
-    ); 
+    url('/src/assets/bg@3x.webp') 3x
+  );
 }
 /* retina для браузеров, не поддерживающих image-set */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
