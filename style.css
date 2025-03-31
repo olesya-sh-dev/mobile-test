@@ -81,7 +81,7 @@
 .lang-fr #yearly,
 .lang-fr #yearly-weekly,
 .lang-fr #weekly {
-  font-size: 15px;
+  font-size: 14px;
 }
 .lang-fr .yearly-btn,
 .lang-fr .weekly-btn {
@@ -118,21 +118,27 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -10;
-  /* Базовый fallback для старых браузеров */
-  background-image: url('/src/assets/bg.png'); /* Резервное изображение PNG */
-  background-image: url('/src/assets/bg.jpeg'); /* Основное изображение JPEG */
-  /* Современные браузеры: WebP с DPR */
-  background-image: -webkit-image-set(
+  z-index: -10; 
+  background-image: url('/src/assets/bg.png'); /* Fallback для старых браузеров */
+  background-image: url('/src/assets/bg.jpeg'); /* Fallback для браузеров, не поддерживающих webp */
+  background-image: url('/src/assets/bg.webp');/* Fallback для браузеров, не поддерживающих image-set */
+  background-image: 
+  image-set(
     url('/src/assets/bg.webp') 1x,
     url('/src/assets/bg@2x.webp') 2x,
-    url('/src/assets/bg@3x.webp') 3x
-  );
-  background-image: image-set(
-    url('/src/assets/bg.webp') 1x,
-    url('/src/assets/bg@2x.webp') 2x,
-    url('/src/assets/bg@3x.webp') 3x
-  );
+    url('/src/assets/bg@3x.webp') 3x 
+    ); 
+}
+/* retina для браузеров, не поддерживающих image-set */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg {
+    background-image: url('/src/assets/bg@2x.webp');
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .bg {
+    background-image: url('/src/assets/bg@3x.webp');
+  }
 }
 
 .close {
@@ -305,7 +311,6 @@ section {
   appearance: none !important;
   box-shadow: none !important;
 }
-
 .footer {
   display: flex;
   justify-content: space-between;

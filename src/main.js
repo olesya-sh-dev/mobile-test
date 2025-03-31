@@ -58,7 +58,6 @@ async function setupTranslations() {
   // Извлекаем параметр lang из URL
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get('lang');
-  console.log(langParam);
 
   // Определяем язык для загрузки переводов
   const language = langParam || defaultLanguage;
@@ -104,7 +103,7 @@ function selectOption(option) {
 // Обработчик для кнопки "Continue"
 document.querySelector('.btn')?.addEventListener('click', () => {
   const selectedOption = document.querySelector('section .selected');
-
+  if (!selectedOption) return;
   if (selectedOption.classList.contains('yearly-btn')) {
     window.location.href = 'https://apple.com/';
   } else if (selectedOption.classList.contains('weekly-btn')) {
